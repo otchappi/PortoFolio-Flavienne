@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider
       attribute="class"
       storageKey="nightwind-mode"
-      defaultTheme="system" // default "light"
+      defaultTheme="system"
     >
       <Component {...pageProps} />
     </ThemeProvider>
