@@ -5,22 +5,14 @@ import { Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import {
   IoAlertCircleOutline,
-  IoBookOutline,
-  IoAlbumsOutline,
-  IoBulbOutline,
   IoMailOutline,
   IoMenuSharp,
-  IoChatboxEllipsesOutline,
   IoRibbonOutline,
   IoSchoolOutline,
   IoBriefcaseOutline,
-  IoLogoTwitter,
   IoLogoLinkedin,
-  IoLogoGithub,
-  IoLogoFacebook,
-  IoLogoInstagram,
-  IoPaperPlane,
   IoCode,
+  IoPersonCircleOutline,
 } from 'react-icons/io5';
 import DarkToggle from './DarkToggle';
 
@@ -77,7 +69,7 @@ export default function Header() {
                           className="bg-violet-500 text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm"
                         >
                           <IoAlertCircleOutline className="w-5 h-5 mr-2" />
-                          About
+                          Présentation
                         </a>
                       </Menu.Item>
                       <Menu.Item>
@@ -86,7 +78,7 @@ export default function Header() {
                           className="bg-violet-500 text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm"
                         >
                           <IoSchoolOutline className="w-5 h-5 mr-2" />
-                          Education & Skills
+                          Formations
                         </a>
                       </Menu.Item>
                       <Menu.Item>
@@ -95,16 +87,7 @@ export default function Header() {
                           className="bg-violet-500 text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm"
                         >
                           <IoBriefcaseOutline className="w-5 h-5 mr-2" />
-                          Experience
-                        </a>
-                      </Menu.Item>
-                      <Menu.Item>
-                        <a
-                          href="/projects"
-                          className="bg-violet-500 text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm"
-                        >
-                          <IoAlbumsOutline className="w-5 h-5 mr-2" />
-                          Projects
+                          Experiences
                         </a>
                       </Menu.Item>
                       <Menu.Item>
@@ -113,34 +96,11 @@ export default function Header() {
                           className="bg-violet-500 text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm"
                         >
                           <IoRibbonOutline className="w-5 h-5 mr-2" />
-                          Awards & Certifications
+                          Certifications
                         </a>
                       </Menu.Item>
                       <Menu.Item>
-                        <a
-                          href="/blogs"
-                          className="bg-violet-500 text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm"
-                        >
-                          <IoChatboxEllipsesOutline className="w-5 h-5 mr-2" />
-                          Blogs
-                        </a>
-                      </Menu.Item>
-                      <Menu.Item>
-                        <a
-                          href="/contact"
-                          className="bg-violet-500 text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm"
-                        >
-                          <IoMailOutline className="w-5 h-5 mr-2" />
-                          Contact
-                        </a>
-                      </Menu.Item>
-                      <Menu.Item>
-                        <a
-                          href="https://dntandan.ml"
-                          className="text-center border-t bg-violet-500 text-gray-900 group flex rounded-md items-center w-full px-2 py-3 mt-1 text-sm"
-                        >
-                          Made with 💙 by @dntandan
-                        </a>
+                          Mon PortoFolio
                       </Menu.Item>
                     </div>
                   </Menu.Items>
@@ -151,7 +111,7 @@ export default function Header() {
           <Link href="/">
             <div className="flex gap-2 items-center">
               <IoCode className="text-2xl" />
-              <h3 className="text-lg font-bold">johndoe</h3>
+              <h3 className="text-lg font-bold">Flavienne</h3>
             </div>
           </Link>
           <div className="pt-2">
@@ -168,36 +128,21 @@ export default function Header() {
       >
         <div className="flex flex-row justify-between px-8 py-4 text-white dark:text-white">
           <div>
-            <p>
-              Made with 💙 by <Link href="https://dntandan.ml">@dntandan</Link>
-            </p>
+            <p>Mon PortFolio</p>
           </div>
           <Link href="/">
             <div className="flex gap-2 items-center">
-              <IoCode className="text-2xl" />
-              <h3 className="text-lg font-bold">johndoe</h3>
+              <IoPersonCircleOutline className="text-2xl" />
+              <h3 className="text-lg font-bold">
+                MBAH BOMBA FLAVIENNE CEDRIQUA
+              </h3>
             </div>
           </Link>
 
           <div className="pt-1">
             <div className="text-white text-xl flex gap-5 dark:text-white">
-              <Link href="https://twitter.com/">
-                <IoLogoTwitter className="hover:text-blue-300" />
-              </Link>
-              <Link href="https://linkedin.com/">
+              <Link href="https://www.linkedin.com/in/mbah-flavienne-293a3324b/">
                 <IoLogoLinkedin className="hover:text-blue-300" />
-              </Link>
-              <Link href="https://github.com/">
-                <IoLogoGithub className="hover:text-blue-300" />
-              </Link>
-              <Link href="https://facebook.com/">
-                <IoLogoFacebook className="hover:text-blue-300" />
-              </Link>
-              <Link href="https://instagram.com/">
-                <IoLogoInstagram className="hover:text-blue-300" />
-              </Link>
-              <Link href="https://telegram.me/">
-                <IoPaperPlane className="hover:text-blue-300" />
               </Link>
             </div>
           </div>
@@ -224,7 +169,7 @@ export default function Header() {
               }
             >
               <IoAlertCircleOutline />
-              <h1 className="ml-2">About</h1>
+              <h1 className="ml-2">Présentation</h1>
             </div>
           </Link>
           <Link href="/education-skills">
@@ -236,7 +181,7 @@ export default function Header() {
               }
             >
               <IoSchoolOutline />
-              <h1 className="ml-2">Education & Skills</h1>
+              <h1 className="ml-2">Formations</h1>
             </div>
           </Link>
           <Link href="/experience">
@@ -248,19 +193,7 @@ export default function Header() {
               }
             >
               <IoBriefcaseOutline />
-              <h1 className="ml-2">Experience</h1>
-            </div>
-          </Link>
-          <Link href="/projects">
-            <div
-              className={
-                router.pathname == '/projects'
-                  ? 'p-2 w-auto flex border-b border-red-500 items-center'
-                  : 'p-2 w-auto flex border-b border-transparent  hover:border-gray-400 items-center'
-              }
-            >
-              <IoAlbumsOutline />
-              <h1 className="ml-2">Projects</h1>
+              <h1 className="ml-2">Experiences </h1>
             </div>
           </Link>
           <Link href="/awards-certification">
@@ -272,31 +205,7 @@ export default function Header() {
               }
             >
               <IoRibbonOutline />
-              <h1 className="ml-2">Awards & Certification</h1>
-            </div>
-          </Link>
-          <Link href="/blogs">
-            <div
-              className={
-                router.pathname == '/blogs'
-                  ? 'p-2 w-auto flex border-b border-red-500 items-center'
-                  : 'p-2 w-auto flex border-b border-transparent  hover:border-gray-400 items-center'
-              }
-            >
-              <IoChatboxEllipsesOutline />
-              <h1 className="ml-2">Blogs</h1>
-            </div>
-          </Link>
-          <Link href="/contact">
-            <div
-              className={
-                router.pathname == '/contact'
-                  ? 'p-2 w-auto flex border-b border-red-500 items-center'
-                  : 'p-2 w-auto flex border-b border-transparent  hover:border-gray-400 items-center'
-              }
-            >
-              <IoMailOutline />
-              <h1 className="ml-2">Contact</h1>
+              <h1 className="ml-2">Certifications</h1>
             </div>
           </Link>
           <div className="p-2 ">

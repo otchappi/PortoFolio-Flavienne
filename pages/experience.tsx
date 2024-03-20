@@ -6,52 +6,56 @@ import VolunteerCard from '@/components/VolunteerCard';
 import Head from 'next/head';
 
 export default function skillsAndExperience() {
-  const internData = {
-    celebmark: {
-      title: 'CelebMark (Event & Celebrity Management Platform)',
-      date: 'Feb 2019 – May 2019',
-      place: 'Mumbai, India',
-      desc:
-        'Developed React and Django based web application with CRUD API, user signup, bookings, registration and event listing, etc.',
-      link: 'https://github.com/dntandan/celebmark',
-      linkText: 'Github Repository',
+  const internData = [
+    {
+      title: 'Assistante Juridique',
+      date: 'Février 2022',
+      place: 'SASU CHILD OF SUN ( Paris)',
+      desc: 'Missions : Rédiger et vérifier les clauses des contrats; Faire de la recherche juridique et de la veille juridique',
+      link: 'https://www.societe.com/societe/child-of-the-sun-847815677.html',
+      linkText: 'SASU CHILD OF SUN',
     },
-  };
-  const mentData = {
-    techhub: {
-      org: 'TechHub Community',
-      date: '2018 - Present',
-      desig: 'Community Lead',
-      desc:
-        "At TechHub, we've developed a huge community around solving programming challenges, building exciting real-world projects in every stack, and daily discussions.",
-      link: 'https://github.com/techhub-community',
-      linkText: 'Github Organization',
+  ];
+  const mentData = [
+    {
+      org: 'Monitrice de Bibliothèque Universitaire',
+      date: 'Septembre 2023 - Actuellement',
+      desig: 'Bibliothéque universitaire Lucien Febvre (Belfort)',
+      desc: 'Missions : Accueillir Les usagers de la bibliothèque; Couvrir et ranger les livres; Gérer les prêts et les retours des livres',
+      link: 'https://bu.univ-fcomte.fr/bibliotheques/bu-belfort/',
+      linkText: 'Bibliothéque universitaire Lucien Febvre',
     },
-    bellatrix: {
-      org: 'Bellatrix Data',
-      date: '2020',
-      desig: 'Frontend Developer',
-      desc:
-        'Bellatrix Data is a data analytics platform to analyse the data and visualise them to the users. We help companies in recruitment by shortlisting developers based upon their contributions at different platforms by visualising their data in a very meaningful way.',
-
-      link: 'https://github.com/bellatrixdata',
-      linkText: 'Github Organization',
+    {
+      org: 'Service civique',
+      date: 'Octobre 2022 - Mars 2023',
+      desig: 'Banque alimentaire de Bourgogne (Dijon)',
+      desc: "Missions : Rédiger ,envoyer les courriers et classer les documents; Préparer les commandes des associations bénéficières; Organiser et participer aux collectes d'aliments dans diverses villes",
+      link: 'https://www.banquealimentaire.org/?mtm_campaign=MARQUE&mtm_source=google&mtm_medium=cpc&gad_source=1&gclid=CjwKCAjwkuqvBhAQEiwA65XxQNhfvPSzbKGOpHBfXWxYR3RVIOZb19NUP9AP-SSpVFVXZrWCziYCohoCZOQQAvD_BwE',
+      linkText: 'Banque alimentaire de Bourgogne',
     },
-  };
-  const volData = {
-    space: {
-      title: 'NASA Space Apps Challenge',
-      desig: 'Event Assistant',
-      year: '2018',
-      place: 'Bangalore, India',
+    {
+      org: 'Agent de production',
+      date: 'Août 2022',
+      desig: 'Société Shaeffler ( Usine,Haguenau )',
+      desc: "Missions : Fabriquer des pièces automobiles et emballer; Vérifier l'état des pièces et répondre aux revendications des clients",
+      link: 'https://www.schaeffler.fr/fr/',
+      linkText: 'Société Shaeffler',
     },
-    akp: {
-      title: 'Akshay Patra Foundations',
-      desig: 'Event Co-ordinator',
-      year: '2017',
-      place: 'Bangalore, India',
+  ];
+  const volData = [
+    {
+      title: 'Association Alsace-Cameroun',
+      desig: 'Venir en aide aux orphelins et personnes en précarité du Cameroun',
+      year: 'Actuellement',
+      place: 'Cameroun',
     },
-  };
+    {
+      title: 'Bénévolat groupe Design invité du jour Instagram',
+      desig: 'Organiser les rencontres',
+      year: '2023',
+      place: 'En ligne, Instagram',
+    },
+  ];
 
   return (
     <>
@@ -59,46 +63,40 @@ export default function skillsAndExperience() {
         <title>Expereience :: GitWind</title>
       </Head>
       <Layout border="border-2">
-        <h3 className="text-lg font-semibold mt-3">Internships</h3>
-        <InternshipCard
-          title={internData.celebmark.title}
-          date={internData.celebmark.date}
-          place={internData.celebmark.place}
-          desc={internData.celebmark.desc}
-          link={internData.celebmark.link}
-          linkText={internData.celebmark.linkText}
-        />
+        <h3 className="text-lg font-semibold mt-3">Stages</h3>
+        {internData.map((i) => (
+          <InternshipCard
+            title={i.title}
+            date={i.date}
+            place={i.place}
+            desc={i.desc}
+            link={i.link}
+            linkText={i.linkText}
+          />
+        ))}
 
-        <h3 className="text-lg font-semibold mt-3">Mentorship</h3>
-        <MentorshipCard
-          org={mentData.techhub.org}
-          date={mentData.techhub.date}
-          desig={mentData.techhub.desig}
-          desc={mentData.techhub.desc}
-          link={mentData.techhub.link}
-          linkText={mentData.techhub.linkText}
+        <h3 className="text-lg font-semibold mt-3">Jobs</h3>
+        {mentData.map(m => (
+          <MentorshipCard
+            org={m.org}
+            date={m.date}
+            desig={m.desig}
+            desc={m.desc}
+            link={m.link}
+            linkText={m.linkText}
+          />
+        ))}
+        <h3 className="text-lg font-semibold mt-3">Bénévolats</h3>
+        {
+          volData.map(v => (
+            <VolunteerCard
+          title={v.title}
+          desig={v.desig}
+          year={v.year}
+          place={v.place}
         />
-        <MentorshipCard
-          org={mentData.bellatrix.org}
-          date={mentData.bellatrix.date}
-          desig={mentData.bellatrix.desig}
-          desc={mentData.bellatrix.desc}
-          link={mentData.bellatrix.link}
-          linkText={mentData.bellatrix.linkText}
-        />
-        <h3 className="text-lg font-semibold mt-3">Volunteer Experience</h3>
-        <VolunteerCard
-          title={volData.space.title}
-          desig={volData.space.desig}
-          year={volData.space.year}
-          place={volData.space.place}
-        />
-        <VolunteerCard
-          title={volData.akp.title}
-          desig={volData.akp.desig}
-          year={volData.akp.year}
-          place={volData.akp.place}
-        />
+          ))
+        }
       </Layout>
     </>
   );

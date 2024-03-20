@@ -2,7 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 import {
   IoNewspaperOutline,
-  IoSchoolOutline,
   IoUnlinkOutline,
 } from 'react-icons/io5';
 
